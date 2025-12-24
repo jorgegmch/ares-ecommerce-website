@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.menu-overlay');
     const closeButton = document.querySelector('.menu-overlay-close');
 
-    // 🔒 ESTADO INICIAL SIEMPRE CERRADO
     menuButton.classList.remove('active');
     overlay.classList.remove('active');
 
