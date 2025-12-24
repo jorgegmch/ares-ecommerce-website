@@ -1,1 +1,57 @@
 <!-- Estructura del HOME -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Img/Logo/isotype-ares.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="CSS/components.css">
+    <link rel="stylesheet" href="CSS/index-styles.css">
+    <title>ARES</title>
+</head>
+<body>
+    <nav>
+        <div class="menu-responsive active" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="index.html" class="container-logo-nav">
+            <img src="img/logo/imagotipo-provisional.png" alt="Logotipo ARES" class="logo-nav">
+        </a>
+        <div class="actions-menu">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 430 430" class="contact-icons"><g stroke="#fff" stroke-width="18"><circle cx="215" cy="215" r="167.5"/><path stroke-linejoin="round" d="M215 311.844c95.714 0 112.5-15.304 112.5-102.573S310.714 106.697 215 106.697s-112.5 15.305-112.5 102.574c0 63.004 8.749 88.499 49.632 97.806V340.3l37.048-28.945c7.894.344 16.481.489 25.82.489Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="16" d="M167.463 162c-1.591-2.228-9.867 5.593-18.415 17.415-8.549 11.823-1.046 35.831 16.687 53.564l27.646 27.646c17.733 17.733 41.696 25.145 53.427 16.506 11.732-8.64 19.734-16.733 17.87-18.098s-7.502-5.456-12.595-9.184c-5.093-3.729-10.504-7.639-12.05-8.776s-5.865.955-9.594 4.683c-3.728 3.729-8.139 5.366-9.821 3.683l-21.553-21.553-22.19-22.189c-2.046-2.046-.682-6.73 3.047-10.458 3.728-3.729 5.729-8.185 4.456-9.913a1688 1688 0 0 0-8.185-11.231c-3.183-4.41-7.093-9.867-8.73-12.095m68.462 46.061a38.24 38.24 0 0 0-17.5-17.615m44.96 19.487c-5.502-23.206-23.746-41.481-46.935-47.028m73.099 48.812c-5.638-38.725-36.256-69.35-74.977-75"/></g></svg>
+            </a>
+            <a href="HTML/auth.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="430" height="430" fill="currentColor" viewBox="0 0 430 430" class="user-icons"><g stroke="#fff" stroke-linejoin="round" stroke-width="18"><path d="M55 350c0-63.513 51.487-115 115-115h90c63.513 0 115 51.487 115 115v25H55z"/><path stroke-linecap="round" stroke-miterlimit="27.88" d="M272.496 76.733C283.423 89.78 290 106.648 290 125c0 41.478-33.628 75-75 75s-75-33.628-75-75 33.628-75 75-75c23.126 0 43.706 10.396 57.496 26.733"/></g></svg>
+            </a>
+            <a href="HTML/shopping-cart.html">
+                <img src="Img/Gif/cart-icon.gif" alt="Icono de carrito de compras" class="cart-icon">
+            </a>
+        </div>
+    </nav>
+    <div class="menu-overlay active">
+        <button class="menu-overlay-close" aria-label="Cerrar menú">✕</button>
+        <ul class="main-menu">
+            <li><a href="#header-index">INICIO</a></li>
+            <li><a href="HTML/catalog.html">COLECCIONES</a></li>
+            <li><a href="#">OFERTAS</a></li>
+            <li><a href="#">NOSOTROS</a></li>
+        </ul>
+    </div>
+
+    <header id="header-index"></header>
+    <main id="main-index"></main>
+    <footer></footer>
+
+    <script src="JS/layout.js"></script>
+
+</body>
+</html>

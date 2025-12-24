@@ -1,1 +1,226 @@
 /* Hoja de estilos para NAV y el FOOTER */
+
+/* CONTENEDOR DEL NAV */
+
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto;
+    grid-template-rows: repeat(1, max-content);
+    column-gap: 0.4rem;
+
+    position: sticky;
+    top: 0;
+    align-items: center;
+    z-index: 999;
+    
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+
+    background-color: #000000;
+    border-bottom: 3px solid #DD0000;
+    overflow: hidden;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Iconos y logo */
+
+.container-logo-nav {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.logo-nav {
+    height: 2.5rem;
+    width: auto;
+}
+
+.actions-menu {
+    grid-column: 5;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-icons {
+    height: 1.7rem;
+    width: auto;
+    align-self: center;
+    color: #000000;
+}
+
+.contact-icons:hover {
+    color: #D46A6A;
+}
+
+.user-icons {
+    height: 1.5rem;
+    width: auto;
+    color: #000000;
+}
+
+.user-icons:hover {
+    color: #D46A6A;
+}
+
+.cart-icon {
+    height: 1.9rem;
+    width: auto;
+}
+
+
+/* Menú overlay para responsive */
+
+.menu-responsive {
+    grid-column: 1;
+    grid-row: 1;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 32px;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.menu-responsive span {
+    width: 25px;
+    height: 2px;
+    background-color: #FFFFFF;
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.menu-responsive span:nth-child(1) {
+    top: 0;
+    transform: rotate(0);
+    transition: top 0.2s ease, transform 0.4s ease;
+}
+
+.menu-responsive span:nth-child(2) {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s ease;
+}
+
+.menu-responsive span:nth-child(3) {
+    top: 0;
+    transform: rotate(0);
+    transition: top 0.2s ease, transform 0.4s ease;
+}
+
+/* Hover de cada línea */
+
+.menu-responsive:hover span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+    background-color: #D46A6A;
+}
+
+.menu-responsive:hover span:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-responsive:hover span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+    background-color: #D46A6A;
+}
+
+/* Overlay para el menú responsive */
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+
+    width: 31%;
+    height: 100%;
+    background-color: #000000e4;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr auto 1fr auto;
+    grid-template-rows: auto 1fr auto 1fr;
+    align-items: center;
+    padding: 2rem;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-overlay a {
+    color: inherit;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Menú principal */
+
+.menu-overlay-close {
+    grid-column: 5;
+    grid-row: 1;
+
+    height: 3rem;
+    width: 3rem;
+
+    color: #DD0000;
+    font-size: 1.5rem;
+    font-weight: 900;
+
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 2rem;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay-close:hover {
+    background-color: #DD0000;
+    color: #FFFFFF;
+}
+
+.main-menu {
+    grid-column: 3;
+    grid-row: 3;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1rem;
+    line-height: 3;
+    justify-items: center;
+}
+
+.main-menu a:hover {
+    color: #DD0000;
+}
+
+/* Media query */
+
+/* @media (max-width: 430px) {
+    
+} */

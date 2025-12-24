@@ -1,1 +1,13 @@
 /* Hoja de estilo base */
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
