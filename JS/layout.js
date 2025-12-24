@@ -22,12 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     menuButton.addEventListener('click', toggleMenu);
     closeButton.addEventListener('click', closeMenu);
 
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            closeMenu();
-        }
-    });
-
     document.querySelectorAll('.main-menu a').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
