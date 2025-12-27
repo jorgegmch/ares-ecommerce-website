@@ -47,28 +47,21 @@ nav a {
     display: flex;
     justify-content: right;
     align-items: center;
-    gap: 0.5rem;
-}
-
-.contact-icons {
-    height: 1.7rem;
-    width: auto;
-    align-self: center;
-    color: #000000;
-}
-
-.contact-icons:hover {
-    color: #D46A6A;
+    gap: 0.6rem;
 }
 
 .user-icons {
     height: 1.5rem;
     width: auto;
+    align-self: center;
     color: #000000;
 }
 
-.user-icons:hover {
-    color: #D46A6A;
+.contact-icons {
+    height: 1.6rem;
+    width: auto;
+    align-self: center;
+    color: #000000;
 }
 
 .cart-icon {
@@ -125,7 +118,6 @@ nav a {
 
 .menu-responsive:hover span:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
-    background-color: #D46A6A;
 }
 
 .menu-responsive:hover span:nth-child(2) {
@@ -135,7 +127,21 @@ nav a {
 
 .menu-responsive:hover span:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
-    background-color: #D46A6A;
+}
+
+/* Active de cada línea para móvil */
+
+.menu-responsive.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-responsive.active span:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-responsive.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Overlay para el menú responsive */
