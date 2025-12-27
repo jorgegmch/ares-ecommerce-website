@@ -54,21 +54,18 @@ nav a {
     height: 1.5rem;
     width: auto;
     align-self: center;
-    color: #000000;
 }
 
 .contact-icons {
     height: 1.6rem;
     width: auto;
     align-self: center;
-    color: #000000;
 }
 
 .cart-icon {
     height: 1.9rem;
     width: auto;
 }
-
 
 /* Menú overlay para responsive */
 
