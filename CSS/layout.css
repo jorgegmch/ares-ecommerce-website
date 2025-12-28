@@ -496,7 +496,7 @@ nav a {
         }
     }
     .menu-overlay {
-        grid-template-rows: 1fr max-content 1.3fr;
+        grid-template-rows: 1fr max-content 1fr;
     }
 
 }
@@ -528,5 +528,10 @@ nav a {
     }
     .menu-responsive {
         grid-column: 2;
+    }
+    .menu-overlay-close {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 1.2rem;
     }
 }
