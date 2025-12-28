@@ -229,14 +229,10 @@ nav a {
 
 /* Menú principal */
 
-.container-overlay-close {
+.menu-overlay-close {
     grid-column: 3;
     grid-row: 1;
-    justify-self: end;
-    align-self: start;
-}
-
-.menu-overlay-close {
+    
     height: 3rem;
     width: 3rem;
 
@@ -250,7 +246,8 @@ nav a {
 
     cursor: pointer;
     transition: all 0.3s ease;
-    text-align: center;
+    justify-self: end;
+    align-self: start;
 }
 
 .menu-overlay-close:hover {
@@ -487,6 +484,10 @@ nav a {
     .logo-nav {
         height: 3rem;
     }
+    .menu-overlay-close {
+        color: #FFFFFF;
+        background-color: transparent;
+    }
 }
 
 /* Tablet vertical + móvil */
@@ -532,11 +533,5 @@ nav a {
     }
     .menu-responsive {
         grid-column: 2;
-    }
-    
-    .menu-overlay-close {
-        height: 2.5rem;
-        width: 2.5rem;
-        font-size: 1.2rem;
     }
 }
