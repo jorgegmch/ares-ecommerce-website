@@ -233,11 +233,11 @@ nav a {
     grid-column: 3;
     grid-row: 1;
     
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
 
     color: #DD0000;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 900;
 
     background-color: #FFFFFF;
@@ -485,6 +485,7 @@ nav a {
         height: 3rem;
     }
     .menu-overlay-close {
+        font-size: 1.5rem;
         color: #FFFFFF;
         background-color: transparent;
     }
