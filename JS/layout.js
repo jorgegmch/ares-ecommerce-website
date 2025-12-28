@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleMenu(e) {
         e.stopPropagation();
+        closeSearchPanel();
         overlay.classList.contains('active') ? closeMenu() : openMenu();
     }
 
@@ -229,6 +230,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function closeSearchPanel() {
+    const searchPanel = document.getElementById("searchPanel");
+    const searchInput = document.querySelector(".search-input");
 
+    if (!searchPanel) return;
+
+    searchPanel.classList.remove("active");
+    document.body.style.overflow = "";
+
+    if (searchInput) searchInput.value = "";
+}
 
 
