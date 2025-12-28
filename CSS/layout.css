@@ -1,12 +1,50 @@
 /* Hoja de estilos para NAV y el FOOTER */
 
+.announcement-bar {
+    width: 100%;
+    height: 2rem;
+    background-color: #DD0000;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+}
+
+.announcement-track {
+    display: flex;
+    gap: 4rem;
+    white-space: nowrap;
+
+    animation: scroll-announcement 20s linear infinite;
+}
+
+.announcement-item {
+    flex-shrink: 0;
+}
+
+@keyframes scroll-announcement {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
 /* CONTENEDOR DEL NAV */
 
 nav {
     display: grid;
-    grid-template-columns: auto 1fr auto 1fr auto;
+    grid-template-columns: auto auto auto;
     grid-template-rows: repeat(1, max-content);
     column-gap: 0.4rem;
+    justify-content: space-around;
 
     position: sticky;
     top: 0;
@@ -31,32 +69,39 @@ nav a {
 /* Iconos y logo */
 
 .container-logo-nav {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
 }
 
 .logo-nav {
-    height: 2.5rem;
+    height: 3.3rem;
     width: auto;
 }
 
 .actions-menu {
-    grid-column: 5;
+    grid-column: 3;
     grid-row: 1;
 
     display: flex;
     justify-content: right;
     align-items: center;
-    gap: 0.6rem;
+    gap: 1.3rem;
 }
 
 .user-icons {
     height: 1.5rem;
     width: auto;
+    margin-right: 0.2rem;
     align-self: center;
 }
 
-.contact-icons {
+.search-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-icons {
     height: 1.6rem;
     width: auto;
     align-self: center;
@@ -147,7 +192,7 @@ nav a {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 2000;
 
     width: 31%;
     height: 100%;
@@ -156,9 +201,8 @@ nav a {
     -webkit-backdrop-filter: blur(8px);
 
     display: grid;
-    grid-template-columns: 1fr 1fr auto 1fr auto;
-    grid-template-rows: auto 1fr auto 1fr;
-    align-items: center;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr max-content 1fr;
     padding: 2rem;
 
     opacity: 0;
@@ -184,9 +228,10 @@ nav a {
 /* Menú principal */
 
 .menu-overlay-close {
-    grid-column: 5;
+    grid-column: 3;
     grid-row: 1;
 
+    
     height: 3rem;
     width: 3rem;
 
@@ -200,6 +245,7 @@ nav a {
 
     cursor: pointer;
     transition: all 0.3s ease;
+    justify-self: right;
 }
 
 .menu-overlay-close:hover {
@@ -208,8 +254,8 @@ nav a {
 }
 
 .main-menu {
-    grid-column: 3;
-    grid-row: 3;
+    grid-column: 2;
+    grid-row: 2;
 
     list-style: none;
     padding: 0;
@@ -217,18 +263,206 @@ nav a {
 
     font-size: 1.5rem;
     font-weight: 800;
+    text-align: center;
 
     letter-spacing: 0.1rem;
     line-height: 3;
-    justify-items: center;
 }
 
 .main-menu a:hover {
     color: #DD0000;
 }
 
+/* Panel de busqueda */
+
+.search-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+
+    width: 31%;
+    height: 100%;
+    background-color: #000000e4;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, max-content);
+    padding: 2rem 2rem 2rem 2rem;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.search-panel a {
+    color: inherit;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.search-panel.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.search-panel-header {
+    grid-column: 1;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.search-panel-header input {
+    flex: 1;
+    font-size: 1.1rem;
+
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #FFFFFF;
+    letter-spacing: 0.1rem;
+}
+
+.search-input::placeholder {
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.search-cancel {
+    color: #DD0000;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 0.9rem;
+
+    height: 1.8rem;
+    width: auto;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-cancel:hover {
+    color: #FFFFFF;
+    background-color: #DD0000;
+}
+
+.search-panel-content {
+    grid-column: 1;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-column-standar {
+    border-top: 1px solid #FFFFFF;
+    padding-top: 2rem;
+}
+
+.search-column-standar h4,
+.search-column h4 {
+    color: #FFFFFF;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: -0.5rem;
+    margin-top: -0.1rem;
+}
+
+.container-list {
+    list-style: none;
+    margin-left: -2.5rem;
+}
+
+.container-list a {
+    position: relative;
+    font-size: 0.8rem;
+    display: inline-block;
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+/* Animación de los textos del panel de busqueda */
+
+.container-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 13px;
+
+    width: 100%;
+    height: 0.5px;
+    background-color: #FFFFFF;
+
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: none;
+}
+
+.container-list a:hover::after {
+    animation: underline-hover 0.8s ease forwards;
+}
+
+@keyframes underline-hover {
+    0% {
+        transform: scaleX(0);
+    }
+    
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 /* Media query */
 
-/* @media (max-width: 430px) {
+@media (max-width: 430px) {
     
-} */
+    nav {
+        grid-template-columns: auto auto 1fr auto;
+        column-gap: 0.1rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .container-logo-nav {
+        grid-column: 1;
+    }
+
+    .logo-nav {
+        height: 3.5rem;
+    }
+
+    .actions-menu {
+        grid-column: 4;
+    }
+
+    .menu-responsive {
+        grid-column: 2;
+    }
+
+    
+}
+
