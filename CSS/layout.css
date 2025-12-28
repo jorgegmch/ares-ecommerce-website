@@ -248,6 +248,9 @@ nav a {
     transition: all 0.3s ease;
     justify-self: end;
     align-self: start;
+
+    margin-top: env(safe-area-inset-top);
+    margin-right: env(safe-area-inset-right);
 }
 
 .menu-overlay-close:hover {
