@@ -196,7 +196,7 @@ nav a {
     z-index: 2000;
 
     width: 31%;
-    height: 100%;
+    height: 100dvh;
     background-color: #000000e4;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -229,10 +229,14 @@ nav a {
 
 /* Menú principal */
 
-.menu-overlay-close {
+.container-overlay-close {
     grid-column: 3;
     grid-row: 1;
-    
+    justify-self: end;
+    align-self: start;
+}
+
+.menu-overlay-close {
     height: 3rem;
     width: 3rem;
 
@@ -246,11 +250,7 @@ nav a {
 
     cursor: pointer;
     transition: all 0.3s ease;
-    justify-self: end;
-    align-self: start;
-
-    margin-top: env(safe-area-inset-top);
-    margin-right: env(safe-area-inset-right);
+    text-align: center;
 }
 
 .menu-overlay-close:hover {
@@ -533,6 +533,7 @@ nav a {
     .menu-responsive {
         grid-column: 2;
     }
+    
     .menu-overlay-close {
         height: 2.5rem;
         width: 2.5rem;
