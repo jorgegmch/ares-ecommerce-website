@@ -5,9 +5,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/logo/isotype-ares-red.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/layout.css">
+    <link rel="stylesheet" href="../CSS/components.css">
+    <link rel="stylesheet" href="../CSS/shopping-cart-styles.css">
+    <title>Carrito de compras - ARES</title>
 </head>
 <body>
-    
+    <section class="announcement-bar">
+        <div class="announcement-track">
+            <p class="announcement-item">🔥 HASTA 50% OFF en nueva colección</p>
+            <p class="announcement-item">🚚 Envíos gratis por compras superiores a $199.000</p>
+            <p class="announcement-item">⏰ Solo hasta el 31 de Diciembre</p>
+        </div>
+    </section>
+    <nav>
+        <div class="menu-responsive active" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="../index.html" class="container-logo-nav">
+            <picture>
+                <source media="(max-width: 430px)" srcset="../img/logo/isotype-ares-red.png" class="logo-nav">
+                <img src="../img/logo/imagotype-ares.png" alt="Logotipo ARES" class="logo-nav">
+            </picture>
+        </a>
+        <div class="actions-menu">
+            <button class="search-btn" aria-label="Buscar">
+                <img src="../img/png/icons/index-icons/search-icon.png" alt="Buscar" class="search-icons">
+            </button>
+            <a href="./auth.html">
+                <img src="../img/png/icons/index-icons/user-icon.png" alt="Icono de usuario" class="user-icons">
+            </a>
+            <a href="shopping-cart.html">
+                <img src="../img/gif/cart-icon.gif" alt="Icono de carrito de compras" class="cart-icon">
+            </a>
+        </div>
+    </nav>
+    <div class="menu-overlay active">
+        <button class="menu-overlay-close" aria-label="Cerrar menú">✕</button>
+        <ul class="main-menu">
+            <li><a href="#">INICIO</a></li>
+            <li><a href="./catalog.html">COLECCIONES</a></li>
+            <li><a href="#">OFERTAS</a></li>
+            <li><a href="#">NOSOTROS</a></li>
+        </ul>
+    </div>
+    <div class="search-panel active" id="searchPanel">
+        <div class="search-panel-header">
+            <input type="search" placeholder="¿EN QUÉ PUEDO AYUDARTE?" aria-label="Buscar productos" class="search-input">
+            <button class="search-cancel" aria-label="Cerrar búsqueda">
+                Cancelar
+            </button>
+        </div>
+        <div class="search-panel-content">
+            <div class="search-column">
+                <h4>BÚSQUEDAS POPULARES</h4>
+                <ul class="container-list">
+                    <!-- JS inserta li > a -->
+                </ul>
+            </div>
+            <div class="search-column-standar">
+                <h4>ENCUENTRA EL REGALO PERFECTO</h4>
+                <ul class="container-list">
+                    <li><a href="#">Regalos ARES</a></li>
+                    <li><a href="#">Personalización</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Tiendas</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/layout.js"></script>
 </body>
 </html>
