@@ -247,7 +247,6 @@ nav a {
     cursor: pointer;
     transition: all 0.3s ease;
     justify-self: end;
-    align-self: start;
     text-align: center;
 }
 
